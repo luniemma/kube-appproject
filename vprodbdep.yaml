@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: vprodb
-          image: vprofile/vprofiledb:V1
+          image: vprofile/vprofiledb
             #args:
             #- "--ignore-db-dir"
           #- "lost+found"
@@ -38,7 +38,7 @@ spec:
         - name: vpro-db-data
           # This AWS EBS volume must already exist.
           awsElasticBlockStore:
-            volumeID: vol-04ee2da85e5aaa165
+            volumeID: MentiondVoumeID
             fsType: ext4
 
       initContainers:
